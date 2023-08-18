@@ -16,17 +16,17 @@ Convert = True
 def converter():
     letters = input("Enter any from the list of the following (letter, word, numbers, signs, or sentence), to convert "
                     "to morse code:\n").lower()
-    new_string = ''
+    morse_code = ''
     for letter in letters:
         if letter in char_list:
             char_index = char_list.index(letter)
-            new_string += morse_code_list[char_index]
+            morse_code += morse_code_list[char_index]
         elif letter not in char_list and letter == " ":
-            new_string += "/"
+            morse_code += "/"
         else:
-            new_string += letter
+            morse_code += letter
 
-    print(f"Here is the code: {new_string}")
+    print(f"Here is the code: {morse_code}")
 
 
 converter()
